@@ -12,23 +12,35 @@ function User({name, surname, age, isLogin, address, friends}){
 
     return(
         <div>
-            {isLogin ? `Benim adım ${name}, soyadım ${surname}` : null}
+            
+            <h1>{`Benim adım ${name}, soyadım ${surname}`}</h1>
+            <br></br>
 
             {address.title} {address.zip}
+            <br></br>
+            <br></br>
 
+            {friends && 
+            friends.map((friend) => 
+               <div key = {friend.id}> {friend.name} </div>
+            )}
+            <br></br>
 
         </div>
     )
 }
 
+//PropTypes class ensures that each prop you give has a data type and other features like 'isRequired'
 User.propTypes = {
     name: PropTypes.string.isRequired,
     surname: PropTypes.string.isRequired,
     age: PropTypes.number,
-    address: propTypes.shape()({
-        title: PropTypes.string,
+    isLogin: PropTypes.bool.isRequired,
+    address: PropTypes.shape({
+        title: PropTypes.string.isRequired,
         zip: PropTypes.number
-    })
+    }),
+    friends: PropTypes.array
 }
 
 export default User

@@ -24,21 +24,42 @@ import User from './components/User';
 //   );
 // }
 
-const friends = ["mike", "dwight", "pam", "jim", "kevin"]
+const friends = [
+  {
+    id: 1,
+    name: "michael"
+  },
+  {
+    id: 2,
+    name: "dwight"
+  },
+  {
+    id: 3,
+    name: "pam"
+  },
+  {
+    id: 4,
+    name: "jim"
+  }
+]
 
 function App() {
   return (
     <div className="mainDiv">
+
     <User 
     name={"Bilal"}
     surname={"Özdemir"}
-    age={"12"}
-    friends={friends}
+    age={22}        //sent in string but requires number
+    isLogin={true}
+    friends={friends} //takes an array of objects
     address={{
       title: "Üsküdar/İstanbul",
       zip: 34699
     }}
+
     />
+
     </div>
   )
 }
