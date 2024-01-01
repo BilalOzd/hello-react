@@ -51,7 +51,7 @@ function App() {
     name={"Bilal"}
     surname={"Özdemir"}
     age={22}        //sent in string but requires number
-    isLogin={true}
+    // isLogin={true} //if I don't send any info for 'isLogin' -> defaultProps will work
     friends={friends} //takes an array of objects
     address={{
       title: "Üsküdar/İstanbul",

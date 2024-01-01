@@ -30,7 +30,7 @@ function User({name, surname, age, isLogin, address, friends}){
     )
 }
 
-//PropTypes class ensures that each prop you give has a data type and other features like 'isRequired'
+//PropTypes class ensures that each prop you give has a data type and other features like 'isRequired'.
 User.propTypes = {
     name: PropTypes.string.isRequired,
     surname: PropTypes.string.isRequired,
@@ -41,6 +41,11 @@ User.propTypes = {
         zip: PropTypes.number
     }),
     friends: PropTypes.array
+}
+
+//defaultProps is assiging a default value to a property in case of there is no assignment or data.
+User.defaultProps = {
+    isLogin: false
 }
 
 export default User
