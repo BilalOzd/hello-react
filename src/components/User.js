@@ -13,7 +13,7 @@ function User({name, surname, age, isLogin, address, friends}){
     return(
         <div>
             
-            <h1>{`Benim adım ${name}, soyadım ${surname}`}</h1>
+            <h1>{`Benim adım ${name}, soyadım ${surname}, yaşım ${age}`}</h1>
             <br></br>
 
             {address.title} {address.zip}
